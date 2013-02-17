@@ -1,0 +1,90 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 16px;
+    line-height: 1.8em;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+[role="navigation"] {
+    background-color: #5890AD;
+}
+[role="main"] {
+    background-color: #00d6b2;
+}
+
+[role="complementary"] {
+    background-color: #adff2f;
+}
+
+[role="navigation"],
+[role="main"],
+[role="complementary"] {
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+    width: 100%;
+    padding: 5%;
+    display: block;
+    height: 100%;
+}
+
+.js [role="navigation"] {
+    margin-left: -100%;
+    float: left;
+}
+.js [role="main"] {
+    margin-left: 0;
+    float: left;
+}
+.js [role="complementary"] {
+    margin-right: -200%;
+    float: left;
+}
+
+
+.active-nav [role="navigation"] {
+    margin-left: 0;
+    width: 90%;
+
+}
+.active-nav [role="main"]{
+    margin-right: -100%;
+}
+.active-nav [role="complementary"] {
+    margin-right: -100%;
+    float: right;
+}
+
+.active-sidebar [role="navigation"] {
+    margin-left: -100%;
+}
+.active-sidebar [role="main"] {
+    margin-left: -80%;
+}
+.active-sidebar [role="complementary"] {
+    margin-left: 0%;
+    width: 90%;
+}
